@@ -1,0 +1,2440 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Nivetha Purushothaman | Digital Marketing Specialist</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <style>
+
+    /* =========================
+       COLOR SYSTEM
+    ========================== */
+
+    :root {
+      --cream: #F3EEDC;
+      --cream-dark: #E9E2CF;
+      --grid: #D8D2C2;
+
+      --blue: #1557D6;
+      --blue-dark: #123B91;
+
+      --black: #111111;
+      --muted: #5E5E5E;
+      --white: #FFFFFF;
+
+      --border: rgba(21, 87, 214, 0.28);
+
+      --radius: 22px;
+    }
+
+
+    /* =========================
+       RESET
+    ========================== */
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: "Inter", sans-serif;
+      color: var(--black);
+
+      background-color: var(--cream);
+
+      background-image:
+        linear-gradient(var(--grid) 1px, transparent 1px),
+        linear-gradient(90deg, var(--grid) 1px, transparent 1px);
+
+      background-size: 34px 34px;
+
+      line-height: 1.6;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+
+    /* =========================
+       CONTAINER
+    ========================== */
+
+    .container {
+      width: min(1180px, calc(100% - 40px));
+      margin: auto;
+    }
+
+
+    /* =========================
+       NAVBAR
+    ========================== */
+
+    nav {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+
+      background: rgba(243,238,220,0.94);
+
+      backdrop-filter: blur(12px);
+
+      border-bottom: 1px solid var(--border);
+    }
+
+    .nav-container {
+      min-height: 78px;
+
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .logo-circle {
+      width: 42px;
+      height: 42px;
+
+      border-radius: 50%;
+
+      background: var(--blue);
+      color: white;
+
+      display: grid;
+      place-items: center;
+
+      font-weight: 800;
+    }
+
+    .logo-name {
+      font-size: 20px;
+      font-weight: 800;
+      letter-spacing: -0.04em;
+    }
+
+    .logo-subtitle {
+      display: block;
+
+      font-size: 9px;
+
+      font-weight: 600;
+
+      letter-spacing: 0.06em;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 28px;
+
+      list-style: none;
+    }
+
+    .nav-links a {
+      font-size: 12px;
+      font-weight: 600;
+
+      position: relative;
+    }
+
+    .nav-links a::after {
+      content: "";
+
+      position: absolute;
+
+      left: 0;
+      bottom: -8px;
+
+      width: 0;
+      height: 2px;
+
+      background: var(--blue);
+
+      transition: 0.3s;
+    }
+
+    .nav-links a:hover::after {
+      width: 100%;
+    }
+
+    .nav-button {
+      background: var(--blue);
+
+      color: white;
+
+      padding: 12px 20px;
+
+      border-radius: 999px;
+
+      font-size: 12px;
+      font-weight: 700;
+
+      transition: 0.3s;
+    }
+
+    .nav-button:hover {
+      background: var(--blue-dark);
+      transform: translateY(-2px);
+    }
+
+
+    /* =========================
+       COMMON
+    ========================== */
+
+    section {
+      padding: 90px 0;
+
+      border-bottom: 1px solid var(--border);
+    }
+
+    .label {
+      display: inline-block;
+
+      padding: 7px 15px;
+
+      background: var(--blue);
+
+      color: white;
+
+      border-radius: 999px;
+
+      font-size: 11px;
+
+      font-weight: 800;
+
+      text-transform: uppercase;
+
+      letter-spacing: 0.05em;
+
+      margin-bottom: 18px;
+    }
+
+    .section-title {
+      font-size: clamp(38px, 5vw, 58px);
+
+      line-height: 1;
+
+      letter-spacing: -0.06em;
+
+      font-weight: 800;
+    }
+
+    .blue {
+      color: var(--blue);
+    }
+
+    .description {
+      color: var(--muted);
+
+      font-size: 16px;
+
+      max-width: 650px;
+
+      margin-top: 18px;
+    }
+
+    .button {
+      display: inline-flex;
+
+      align-items: center;
+      justify-content: center;
+
+      padding: 14px 22px;
+
+      border-radius: 999px;
+
+      font-size: 12px;
+
+      font-weight: 800;
+
+      transition: 0.3s;
+    }
+
+    .button-blue {
+      background: var(--blue);
+      color: white;
+    }
+
+    .button-blue:hover {
+      background: var(--blue-dark);
+      transform: translateY(-3px);
+    }
+
+    .button-outline {
+      border: 1.5px solid var(--blue);
+
+      color: var(--blue);
+    }
+
+    .button-outline:hover {
+      background: var(--blue);
+      color: white;
+
+      transform: translateY(-3px);
+    }
+
+    .card {
+      background: rgba(243,238,220,0.8);
+
+      border: 1.5px solid var(--border);
+
+      border-radius: var(--radius);
+    }
+
+
+    /* =========================
+       HERO
+    ========================== */
+
+    .hero {
+      min-height: calc(100vh - 78px);
+
+      display: grid;
+
+      grid-template-columns: 1.05fr 0.95fr;
+
+      align-items: center;
+
+      gap: 50px;
+    }
+
+    .hero h1 {
+      font-size: clamp(52px, 7vw, 88px);
+
+      line-height: 0.96;
+
+      letter-spacing: -0.07em;
+
+      font-weight: 800;
+    }
+
+    .hero-text {
+      max-width: 650px;
+
+      margin: 25px 0;
+
+      color: var(--muted);
+
+      font-size: 17px;
+    }
+
+    .hero-buttons {
+      display: flex;
+
+      gap: 12px;
+
+      flex-wrap: wrap;
+    }
+
+
+    /* HERO SKILLS */
+
+    .hero-skills {
+      display: grid;
+
+      grid-template-columns: repeat(4, 1fr);
+
+      margin-top: 40px;
+    }
+
+    .hero-skill {
+      text-align: center;
+    }
+
+    .skill-icon {
+      width: 52px;
+      height: 52px;
+
+      margin: auto;
+
+      border: 1.5px solid var(--blue);
+
+      border-radius: 50%;
+
+      display: grid;
+      place-items: center;
+
+      color: var(--blue);
+
+      font-weight: 800;
+    }
+
+    .hero-skill strong {
+      display: block;
+
+      font-size: 13px;
+
+      margin-top: 8px;
+    }
+
+    .hero-skill span {
+      font-size: 10px;
+
+      color: var(--muted);
+    }
+
+
+    /* =========================
+       HERO IMAGE
+    ========================== */
+
+    .hero-image {
+      display: flex;
+
+      justify-content: center;
+
+      position: relative;
+    }
+
+    .photo-frame {
+      width: 410px;
+      height: 500px;
+
+      border: 2px solid var(--blue);
+
+      border-radius: 210px 210px 30px 30px;
+
+      overflow: hidden;
+
+      background: var(--cream-dark);
+    }
+
+    .photo-frame img {
+      width: 100%;
+      height: 100%;
+
+      object-fit: cover;
+    }
+
+    .photo-placeholder {
+      width: 100%;
+      height: 100%;
+
+      display: grid;
+      place-items: center;
+
+      text-align: center;
+
+      color: var(--blue);
+
+      font-size: 22px;
+
+      font-weight: 800;
+    }
+
+    .floating-card {
+      position: absolute;
+
+      right: 0;
+      bottom: 30px;
+
+      width: 190px;
+
+      padding: 18px;
+
+      background: white;
+
+      border: 1px solid var(--border);
+
+      border-radius: 18px;
+
+      box-shadow: 0 15px 40px rgba(0,0,0,0.08);
+
+      font-size: 11px;
+    }
+
+    .floating-card strong {
+      color: var(--blue);
+
+      display: block;
+
+      font-size: 14px;
+
+      margin-bottom: 5px;
+    }
+
+
+    /* =========================
+       ABOUT
+    ========================== */
+
+    .about {
+      display: grid;
+
+      grid-template-columns: 0.8fr 1.2fr;
+
+      gap: 50px;
+
+      align-items: center;
+    }
+
+    .about-text p {
+      color: var(--muted);
+
+      margin: 15px 0;
+
+      font-size: 15px;
+    }
+
+    .process {
+      padding: 35px;
+
+      display: grid;
+
+      grid-template-columns: repeat(4, 1fr);
+    }
+
+    .process-item {
+      text-align: center;
+
+      padding: 10px 15px;
+
+      border-right: 1px solid var(--border);
+    }
+
+    .process-item:last-child {
+      border-right: none;
+    }
+
+    .process-icon {
+      width: 60px;
+      height: 60px;
+
+      margin: auto;
+
+      border: 1.5px solid var(--blue);
+
+      border-radius: 50%;
+
+      display: grid;
+      place-items: center;
+
+      color: var(--blue);
+
+      font-weight: 800;
+
+      font-size: 20px;
+    }
+
+    .process-item h3 {
+      font-size: 13px;
+
+      margin-top: 12px;
+    }
+
+    .process-item p {
+      font-size: 10px;
+
+      color: var(--muted);
+
+      margin-top: 5px;
+    }
+
+
+    /* =========================
+       SKILLS
+    ========================== */
+
+    .skills-grid {
+      margin-top: 45px;
+
+      display: grid;
+
+      grid-template-columns: repeat(3, 1fr);
+
+      gap: 15px;
+    }
+
+    .skill-card {
+      padding: 25px;
+
+      min-height: 235px;
+
+      transition: 0.3s;
+    }
+
+    .skill-card:hover {
+      transform: translateY(-5px);
+
+      border-color: var(--blue);
+    }
+
+    .skill-number {
+      color: var(--blue);
+
+      font-size: 20px;
+
+      font-weight: 800;
+    }
+
+    .skill-card h3 {
+      font-size: 20px;
+
+      margin: 15px 0;
+    }
+
+    .skill-card ul {
+      list-style: none;
+
+      color: var(--muted);
+
+      font-size: 12px;
+    }
+
+    .skill-card li {
+      margin: 6px 0;
+    }
+
+    .skill-card li::before {
+      content: "→ ";
+
+      color: var(--blue);
+
+      font-weight: 800;
+    }
+
+
+    /* =========================
+       EXPERIENCE
+    ========================== */
+
+    .experience-grid {
+      display: grid;
+
+      grid-template-columns: 0.8fr 1.2fr;
+
+      gap: 50px;
+
+      margin-top: 45px;
+    }
+
+    .timeline {
+      border-left: 2px solid var(--blue);
+
+      padding-left: 25px;
+    }
+
+    .timeline-item {
+      position: relative;
+
+      padding-bottom: 35px;
+    }
+
+    .timeline-item::before {
+      content: "";
+
+      position: absolute;
+
+      width: 10px;
+      height: 10px;
+
+      background: var(--blue);
+
+      border-radius: 50%;
+
+      left: -31px;
+
+      top: 6px;
+
+      border: 3px solid var(--cream);
+    }
+
+    .timeline-date {
+      color: var(--blue);
+
+      font-size: 11px;
+
+      font-weight: 800;
+    }
+
+    .timeline-item h3 {
+      font-size: 17px;
+
+      margin-top: 4px;
+    }
+
+    .company {
+      color: var(--blue-dark);
+
+      font-size: 13px;
+
+      font-weight: 600;
+    }
+
+    .timeline-item p {
+      color: var(--muted);
+
+      font-size: 12px;
+
+      margin-top: 7px;
+    }
+
+
+    /* =========================
+       PROJECTS
+    ========================== */
+
+    .projects {
+      display: grid;
+
+      grid-template-columns: repeat(2, 1fr);
+
+      gap: 15px;
+    }
+
+    .project {
+      padding: 25px;
+
+      min-height: 260px;
+
+      transition: 0.3s;
+    }
+
+    .project:hover {
+      transform: translateY(-5px);
+    }
+
+    .project-number {
+      display: inline-grid;
+
+      place-items: center;
+
+      width: 35px;
+      height: 35px;
+
+      background: var(--blue);
+
+      color: white;
+
+      border-radius: 10px;
+
+      font-weight: 800;
+
+      font-size: 12px;
+    }
+
+    .project h3 {
+      font-size: 18px;
+
+      margin: 15px 0 8px;
+    }
+
+    .project p {
+      color: var(--muted);
+
+      font-size: 12px;
+    }
+
+    .tags {
+      display: flex;
+
+      flex-wrap: wrap;
+
+      gap: 6px;
+
+      margin-top: 18px;
+    }
+
+    .tag {
+      border: 1px solid var(--border);
+
+      border-radius: 999px;
+
+      padding: 5px 9px;
+
+      color: var(--blue-dark);
+
+      font-size: 9px;
+
+      font-weight: 700;
+    }
+
+
+    /* =========================
+       RESULTS
+    ========================== */
+
+    .results {
+      display: grid;
+
+      grid-template-columns: 0.8fr 1.2fr;
+
+      gap: 50px;
+
+      align-items: center;
+    }
+
+    .results p {
+      color: var(--muted);
+
+      margin-top: 18px;
+    }
+
+    .stats {
+      display: grid;
+
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    .stat {
+      padding: 30px;
+
+      border-left: 1px solid var(--border);
+
+      border-bottom: 1px solid var(--border);
+    }
+
+    .stat strong {
+      display: block;
+
+      color: var(--blue);
+
+      font-size: 40px;
+
+      letter-spacing: -0.05em;
+    }
+
+    .stat span {
+      font-size: 11px;
+
+      font-weight: 700;
+    }
+
+
+    /* =========================
+       TOOLS
+    ========================== */
+
+    .tools {
+      margin-top: 40px;
+
+      display: grid;
+
+      grid-template-columns: repeat(6, 1fr);
+
+      gap: 10px;
+    }
+
+    .tool {
+      padding: 20px 8px;
+
+      text-align: center;
+
+      border: 1px solid var(--border);
+
+      border-radius: 16px;
+
+      font-size: 10px;
+
+      font-weight: 700;
+    }
+
+    .tool-icon {
+      color: var(--blue);
+
+      font-size: 18px;
+
+      font-weight: 800;
+
+      margin-bottom: 7px;
+    }
+
+
+    /* =========================
+       CONTACT
+    ========================== */
+
+    .contact {
+      display: grid;
+
+      grid-template-columns: 1fr 0.8fr;
+
+      gap: 50px;
+
+      align-items: center;
+    }
+
+    .contact-text p {
+      color: var(--muted);
+
+      max-width: 600px;
+
+      margin: 20px 0 25px;
+    }
+
+    .contact-box {
+      padding: 30px;
+    }
+
+    .contact-item {
+      display: flex;
+
+      align-items: center;
+
+      gap: 12px;
+
+      padding: 15px 0;
+
+      border-bottom: 1px solid var(--border);
+    }
+
+    .contact-item:last-child {
+      border-bottom: none;
+    }
+
+    .contact-icon {
+      width: 36px;
+      height: 36px;
+
+      border: 1px solid var(--blue);
+
+      border-radius: 9px;
+
+      display: grid;
+      place-items: center;
+
+      color: var(--blue);
+
+      font-weight: 800;
+    }
+
+    .contact-item small {
+      display: block;
+
+      color: var(--blue);
+
+      font-size: 9px;
+
+      font-weight: 800;
+
+      text-transform: uppercase;
+    }
+
+    .contact-item span {
+      font-size: 12px;
+    }
+
+
+    /* =========================
+       FOOTER
+    ========================== */
+
+    footer {
+      padding: 25px;
+
+      text-align: center;
+
+      color: var(--muted);
+
+      font-size: 11px;
+    }
+
+
+    /* =========================
+       MOBILE
+    ========================== */
+
+    @media(max-width: 900px) {
+
+      .nav-links {
+        display: none;
+      }
+
+      .nav-button {
+        display: none;
+      }
+
+      .hero,
+      .about,
+      .experience-grid,
+      .results,
+      .contact {
+        grid-template-columns: 1fr;
+      }
+
+      .hero {
+        padding: 60px 0;
+      }
+
+      .skills-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .tools {
+        grid-template-columns: repeat(3, 1fr);
+      }
+
+    }
+
+
+    @media(max-width: 600px) {
+
+      .container {
+        width: calc(100% - 24px);
+      }
+
+      section {
+        padding: 60px 0;
+      }
+
+      .hero h1 {
+        font-size: 50px;
+      }
+
+      .hero-skills {
+        grid-template-columns: repeat(2, 1fr);
+
+        gap: 20px;
+
+        margin-top: 35px;
+      }
+
+      .photo-frame {
+        width: 100%;
+
+        height: 420px;
+      }
+
+      .process {
+        grid-template-columns: repeat(2, 1fr);
+
+        gap: 25px;
+      }
+
+      .process-item {
+        border-right: none;
+      }
+
+      .skills-grid,
+      .projects {
+        grid-template-columns: 1fr;
+      }
+
+      .tools {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .stats {
+        grid-template-columns: 1fr 1fr;
+      }
+
+    }
+
+  </style>
+</head>
+
+
+<body>
+
+
+<!-- =========================
+     NAVIGATION
+========================== -->
+
+<nav>
+
+  <div class="container nav-container">
+
+    <a href="#home" class="logo">
+
+      <div class="logo-circle">
+        N
+      </div>
+
+      <div>
+        <div class="logo-name">
+          NIVETHA
+        </div>
+
+        <span class="logo-subtitle">
+          DIGITAL MARKETING SPECIALIST
+        </span>
+      </div>
+
+    </a>
+
+
+    <ul class="nav-links">
+
+      <li>
+        <a href="#home">
+          HOME
+        </a>
+      </li>
+
+      <li>
+        <a href="#about">
+          ABOUT
+        </a>
+      </li>
+
+      <li>
+        <a href="#skills">
+          SKILLS
+        </a>
+      </li>
+
+      <li>
+        <a href="#experience">
+          EXPERIENCE
+        </a>
+      </li>
+
+      <li>
+        <a href="#projects">
+          PROJECTS
+        </a>
+      </li>
+
+      <li>
+        <a href="#contact">
+          CONTACT
+        </a>
+      </li>
+
+    </ul>
+
+
+    <a href="#contact" class="nav-button">
+      LET'S TALK →
+    </a>
+
+  </div>
+
+</nav>
+
+
+
+<main>
+
+
+<!-- =========================
+     HOME
+========================== -->
+
+<section id="home">
+
+  <div class="container hero">
+
+
+    <div>
+
+      <span class="label">
+        Digital Marketing Specialist
+      </span>
+
+
+      <h1>
+
+        Turning Clicks into
+
+        <span class="blue">
+          Growth & Results.
+        </span>
+
+      </h1>
+
+
+      <p class="hero-text">
+
+        I help businesses grow through data-driven SEO,
+        Google Ads, Meta Ads and performance marketing
+        strategies that focus on measurable results.
+
+      </p>
+
+
+      <div class="hero-buttons">
+
+        <a href="#projects"
+           class="button button-blue">
+
+          VIEW MY WORK →
+
+        </a>
+
+
+        <a href="#contact"
+           class="button button-outline">
+
+          LET'S CONNECT
+
+        </a>
+
+      </div>
+
+
+      <div class="hero-skills">
+
+
+        <div class="hero-skill">
+
+          <div class="skill-icon">
+            ↗
+          </div>
+
+          <strong>
+            SEO
+          </strong>
+
+          <span>
+            Rank Higher
+          </span>
+
+        </div>
+
+
+        <div class="hero-skill">
+
+          <div class="skill-icon">
+            ◈
+          </div>
+
+          <strong>
+            Google Ads
+          </strong>
+
+          <span>
+            Get More Leads
+          </span>
+
+        </div>
+
+
+        <div class="hero-skill">
+
+          <div class="skill-icon">
+            ∞
+          </div>
+
+          <strong>
+            Meta Ads
+          </strong>
+
+          <span>
+            Scale Campaigns
+          </span>
+
+        </div>
+
+
+        <div class="hero-skill">
+
+          <div class="skill-icon">
+            ◎
+          </div>
+
+          <strong>
+            Performance
+          </strong>
+
+          <span>
+            Drive Results
+          </span>
+
+        </div>
+
+
+      </div>
+
+    </div>
+
+
+
+    <!-- PHOTO -->
+
+    <div class="hero-image">
+
+      <div class="photo-frame">
+
+        <!--
+        REPLACE THIS WITH YOUR PHOTO:
+
+        <img src="images/nivetha.jpg"
+             alt="Nivetha Purushothaman">
+        -->
+
+        <div class="photo-placeholder">
+
+          ADD<br>
+          YOUR<br>
+          PHOTO
+
+        </div>
+
+      </div>
+
+
+      <div class="floating-card">
+
+        <strong>
+          DATA → STRATEGY → RESULTS
+        </strong>
+
+        Digital marketing focused
+        on measurable growth.
+
+      </div>
+
+    </div>
+
+
+  </div>
+
+</section>
+
+
+
+<!-- =========================
+     ABOUT
+========================== -->
+
+<section id="about">
+
+  <div class="container about">
+
+
+    <div class="about-text">
+
+      <span class="label">
+        About Me
+      </span>
+
+
+      <h2 class="section-title">
+
+        Digital Marketing That Goes
+
+        <span class="blue">
+          Beyond Clicks.
+        </span>
+
+      </h2>
+
+
+      <p>
+
+        I'm a Digital Marketing professional based
+        in Chennai with hands-on experience across
+        SEO, paid advertising, social media marketing
+        and campaign analysis.
+
+      </p>
+
+
+      <p>
+
+        I combine creativity with data to understand
+        what works, optimize campaigns and build
+        strategies focused on business growth.
+
+      </p>
+
+
+      <a href="#contact"
+         class="button button-outline">
+
+        LET'S CONNECT →
+
+      </a>
+
+    </div>
+
+
+
+    <div class="process card">
+
+
+      <div class="process-item">
+
+        <div class="process-icon">
+          ↗
+        </div>
+
+        <h3>
+          DATA
+        </h3>
+
+        <p>
+          Analyze performance
+          and identify opportunities.
+        </p>
+
+      </div>
+
+
+      <div class="process-item">
+
+        <div class="process-icon">
+          ✦
+        </div>
+
+        <h3>
+          STRATEGY
+        </h3>
+
+        <p>
+          Build smart strategies
+          around audience and goals.
+        </p>
+
+      </div>
+
+
+      <div class="process-item">
+
+        <div class="process-icon">
+          ⚙
+        </div>
+
+        <h3>
+          EXECUTION
+        </h3>
+
+        <p>
+          Launch and optimize
+          campaigns with precision.
+        </p>
+
+      </div>
+
+
+      <div class="process-item">
+
+        <div class="process-icon">
+          ✓
+        </div>
+
+        <h3>
+          RESULTS
+        </h3>
+
+        <p>
+          Measure outcomes
+          and improve continuously.
+        </p>
+
+      </div>
+
+
+    </div>
+
+  </div>
+
+</section>
+
+
+
+<!-- =========================
+     SKILLS
+========================== -->
+
+<section id="skills">
+
+  <div class="container">
+
+    <span class="label">
+      My Skills
+    </span>
+
+
+    <h2 class="section-title">
+
+      Skills That
+
+      <span class="blue">
+        Drive Performance.
+      </span>
+
+    </h2>
+
+
+
+    <div class="skills-grid">
+
+
+      <div class="skill-card card">
+
+        <div class="skill-number">
+          01
+        </div>
+
+        <h3>
+          SEO
+        </h3>
+
+        <ul>
+
+          <li>
+            Keyword Research
+          </li>
+
+          <li>
+            On-Page SEO
+          </li>
+
+          <li>
+            Technical SEO
+          </li>
+
+          <li>
+            Search Console
+          </li>
+
+          <li>
+            Content Optimization
+          </li>
+
+          <li>
+            SEO Analysis
+          </li>
+
+        </ul>
+
+      </div>
+
+
+
+      <div class="skill-card card">
+
+        <div class="skill-number">
+          02
+        </div>
+
+        <h3>
+          Google Ads
+        </h3>
+
+        <ul>
+
+          <li>
+            Search Campaigns
+          </li>
+
+          <li>
+            Keyword Targeting
+          </li>
+
+          <li>
+            Ad Copy
+          </li>
+
+          <li>
+            Conversion Tracking
+          </li>
+
+          <li>
+            Bid Optimization
+          </li>
+
+          <li>
+            Campaign Analysis
+          </li>
+
+        </ul>
+
+      </div>
+
+
+
+      <div class="skill-card card">
+
+        <div class="skill-number">
+          03
+        </div>
+
+        <h3>
+          Meta Ads
+        </h3>
+
+        <ul>
+
+          <li>
+            Campaign Setup
+          </li>
+
+          <li>
+            Audience Targeting
+          </li>
+
+          <li>
+            Creative Testing
+          </li>
+
+          <li>
+            Retargeting
+          </li>
+
+          <li>
+            Lead Generation
+          </li>
+
+          <li>
+            Campaign Optimization
+          </li>
+
+        </ul>
+
+      </div>
+
+
+
+      <div class="skill-card card">
+
+        <div class="skill-number">
+          04
+        </div>
+
+        <h3>
+          Performance Marketing
+        </h3>
+
+        <ul>
+
+          <li>
+            Funnel Strategy
+          </li>
+
+          <li>
+            Lead Generation
+          </li>
+
+          <li>
+            Conversion Optimization
+          </li>
+
+          <li>
+            KPI Tracking
+          </li>
+
+          <li>
+            A/B Testing
+          </li>
+
+          <li>
+            Performance Reporting
+          </li>
+
+        </ul>
+
+      </div>
+
+
+
+      <div class="skill-card card">
+
+        <div class="skill-number">
+          05
+        </div>
+
+        <h3>
+          Analytics
+        </h3>
+
+        <ul>
+
+          <li>
+            Google Analytics 4
+          </li>
+
+          <li>
+            Search Console
+          </li>
+
+          <li>
+            Looker Studio
+          </li>
+
+          <li>
+            Conversion Tracking
+          </li>
+
+          <li>
+            KPI Analysis
+          </li>
+
+          <li>
+            Data Reporting
+          </li>
+
+        </ul>
+
+      </div>
+
+
+
+      <div class="skill-card card">
+
+        <div class="skill-number">
+          06
+        </div>
+
+        <h3>
+          Content
+        </h3>
+
+        <ul>
+
+          <li>
+            Content Strategy
+          </li>
+
+          <li>
+            Social Media
+          </li>
+
+          <li>
+            Copywriting
+          </li>
+
+          <li>
+            Content Planning
+          </li>
+
+          <li>
+            Creative Strategy
+          </li>
+
+        </ul>
+
+      </div>
+
+
+    </div>
+
+  </div>
+
+</section>
+
+
+
+<!-- =========================
+     EXPERIENCE
+========================== -->
+
+<section id="experience">
+
+  <div class="container">
+
+    <span class="label">
+      Experience
+    </span>
+
+
+    <h2 class="section-title">
+
+      Experience &
+
+      <span class="blue">
+        Growth.
+      </span>
+
+    </h2>
+
+
+    <div class="experience-grid">
+
+
+      <div class="timeline">
+
+
+        <div class="timeline-item">
+
+          <span class="timeline-date">
+            2025 – PRESENT
+          </span>
+
+          <h3>
+            Digital Marketing Intern
+          </h3>
+
+          <div class="company">
+            Orange Digital Marketing
+          </div>
+
+          <p>
+
+            Hands-on experience across digital
+            marketing activities including SEO,
+            paid campaigns, content and performance
+            analysis.
+
+          </p>
+
+        </div>
+
+
+
+        <div class="timeline-item">
+
+          <span class="timeline-date">
+            2024
+          </span>
+
+          <h3>
+            Engineering Graduate
+          </h3>
+
+          <div class="company">
+            Rajalakshmi Engineering College
+          </div>
+
+          <p>
+
+            Completed undergraduate education
+            with an academic score of 8.0.
+
+          </p>
+
+        </div>
+
+
+
+        <div class="timeline-item">
+
+          <span class="timeline-date">
+            2025
+          </span>
+
+          <h3>
+            Digital Marketing Certification
+          </h3>
+
+          <div class="company">
+            Courseinn Academy
+          </div>
+
+          <p>
+
+            Completed professional digital
+            marketing certification.
+
+          </p>
+
+        </div>
+
+
+      </div>
+
+
+      <div id="projects">
+
+        <span class="label">
+          Projects
+        </span>
+
+
+        <div class="projects">
+
+
+          <div class="project card">
+
+            <span class="project-number">
+              01
+            </span>
+
+            <h3>
+              Google Ads Lead Generation
+            </h3>
+
+            <p>
+
+              Search campaign project focused
+              on keyword research, ad structure
+              and lead generation.
+
+            </p>
+
+            <div class="tags">
+
+              <span class="tag">
+                Google Ads
+              </span>
+
+              <span class="tag">
+                Keywords
+              </span>
+
+              <span class="tag">
+                Search
+              </span>
+
+              <span class="tag">
+                Optimization
+              </span>
+
+            </div>
+
+          </div>
+
+
+
+          <div class="project card">
+
+            <span class="project-number">
+              02
+            </span>
+
+            <h3>
+              Meta Ads Campaign
+            </h3>
+
+            <p>
+
+              Campaign project focused on
+              audience research, creative testing
+              and lead generation.
+
+            </p>
+
+            <div class="tags">
+
+              <span class="tag">
+                Meta Ads
+              </span>
+
+              <span class="tag">
+                Audience
+              </span>
+
+              <span class="tag">
+                Leads
+              </span>
+
+              <span class="tag">
+                Retargeting
+              </span>
+
+            </div>
+
+          </div>
+
+
+
+          <div class="project card">
+
+            <span class="project-number">
+              03
+            </span>
+
+            <h3>
+              SEO Growth Strategy
+            </h3>
+
+            <p>
+
+              SEO project covering keyword research,
+              on-page optimization and search
+              performance analysis.
+
+            </p>
+
+            <div class="tags">
+
+              <span class="tag">
+                SEO
+              </span>
+
+              <span class="tag">
+                Keywords
+              </span>
+
+              <span class="tag">
+                Content
+              </span>
+
+              <span class="tag">
+                GSC
+              </span>
+
+            </div>
+
+          </div>
+
+
+
+          <div class="project card">
+
+            <span class="project-number">
+              04
+            </span>
+
+            <h3>
+              Performance Marketing
+            </h3>
+
+            <p>
+
+              Campaign framework connecting
+              audience, channels, KPIs and
+              conversion goals.
+
+            </p>
+
+            <div class="tags">
+
+              <span class="tag">
+                Strategy
+              </span>
+
+              <span class="tag">
+                KPIs
+              </span>
+
+              <span class="tag">
+                Funnel
+              </span>
+
+              <span class="tag">
+                Analytics
+              </span>
+
+            </div>
+
+          </div>
+
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+
+<!-- =========================
+     RESULTS
+========================== -->
+
+<section>
+
+  <div class="container results">
+
+
+    <div>
+
+      <span class="label">
+        What I Focus On
+      </span>
+
+
+      <h2 class="section-title">
+
+        Marketing Is About
+
+        <span class="blue">
+          Results.
+        </span>
+
+      </h2>
+
+
+      <p>
+
+        I focus on the metrics that matter —
+        leads, conversions, traffic, cost efficiency
+        and campaign performance.
+
+      </p>
+
+    </div>
+
+
+
+    <div class="stats card">
+
+
+      <div class="stat">
+
+        <strong>
+          SEO
+        </strong>
+
+        <span>
+          Organic Growth
+        </span>
+
+      </div>
+
+
+      <div class="stat">
+
+        <strong>
+          ADS
+        </strong>
+
+        <span>
+          Paid Campaigns
+        </span>
+
+      </div>
+
+
+      <div class="stat">
+
+        <strong>
+          ROI
+        </strong>
+
+        <span>
+          Performance Focus
+        </span>
+
+      </div>
+
+
+      <div class="stat">
+
+        <strong>
+          DATA
+        </strong>
+
+        <span>
+          Analytics & Optimization
+        </span>
+
+      </div>
+
+
+    </div>
+
+  </div>
+
+</section>
+
+
+
+<!-- =========================
+     TOOLS
+========================== -->
+
+<section>
+
+  <div class="container">
+
+    <span class="label">
+      Tools
+    </span>
+
+
+    <h2 class="section-title">
+
+      My Marketing
+
+      <span class="blue">
+        Toolkit.
+      </span>
+
+    </h2>
+
+
+    <div class="tools">
+
+
+      <div class="tool">
+
+        <div class="tool-icon">
+          G
+        </div>
+
+        Google Ads
+
+      </div>
+
+
+      <div class="tool">
+
+        <div class="tool-icon">
+          M
+        </div>
+
+        Meta Ads
+
+      </div>
+
+
+      <div class="tool">
+
+        <div class="tool-icon">
+          GA
+        </div>
+
+        Google Analytics
+
+      </div>
+
+
+      <div class="tool">
+
+        <div class="tool-icon">
+          GSC
+        </div>
+
+        Search Console
+
+      </div>
+
+
+      <div class="tool">
+
+        <div class="tool-icon">
+          GT
+        </div>
+
+        Tag Manager
+
+      </div>
+
+
+      <div class="tool">
+
+        <div class="tool-icon">
+          LS
+        </div>
+
+        Looker Studio
+
+      </div>
+
+
+      <div class="tool">
+
+        <div class="tool-icon">
+          S
+        </div>
+
+        SEMrush
+
+      </div>
+
+
+      <div class="tool">
+
+        <div class="tool-icon">
+          A
+        </div>
+
+        Ahrefs
+
+      </div>
+
+
+      <div class="tool">
+
+        <div class="tool-icon">
+          C
+        </div>
+
+        Canva
+
+      </div>
+
+
+    </div>
+
+  </div>
+
+</section>
+
+
+
+<!-- =========================
+     CONTACT
+========================== -->
+
+<section id="contact">
+
+  <div class="container contact">
+
+
+    <div class="contact-text">
+
+      <span class="label">
+        Let's Work Together
+      </span>
+
+
+      <h2 class="section-title">
+
+        Ready to Turn Marketing Into
+
+        <span class="blue">
+          Measurable Growth?
+        </span>
+
+      </h2>
+
+
+      <p>
+
+        I'm currently looking for Digital Marketing
+        opportunities, especially roles focused on
+        Google Ads, Meta Ads, SEO and Performance Marketing.
+
+      </p>
+
+
+      <a
+        href="mailto:nivethapurushothaman23@gmail.com"
+        class="button button-blue">
+
+        GET IN TOUCH →
+
+      </a>
+
+    </div>
+
+
+
+    <div class="contact-box card">
+
+
+      <div class="contact-item">
+
+        <div class="contact-icon">
+          @
+        </div>
+
+        <div>
+
+          <small>
+            Email
+          </small>
+
+          <span>
+            nivethapurushothaman23@gmail.com
+          </span>
+
+        </div>
+
+      </div>
+
+
+
+      <div class="contact-item">
+
+        <div class="contact-icon">
+          in
+        </div>
+
+        <div>
+
+          <small>
+            LinkedIn
+          </small>
+
+          <span>
+
+            <a
+              href="https://www.linkedin.com/in/nivetha-purushothaman-2010a4364/"
+              target="_blank">
+
+              linkedin.com/in/nivetha-purushothaman-2010a4364
+
+            </a>
+
+          </span>
+
+        </div>
+
+      </div>
+
+
+
+      <div class="contact-item">
+
+        <div class="contact-icon">
+          CV
+        </div>
+
+        <div>
+
+          <small>
+            Resume
+          </small>
+
+          <span>
+
+            <a href="#">
+              Download Resume →
+            </a>
+
+          </span>
+
+        </div>
+
+      </div>
+
+
+
+      <div class="contact-item">
+
+        <div class="contact-icon">
+          ⌖
+        </div>
+
+        <div>
+
+          <small>
+            Location
+          </small>
+
+          <span>
+            Chennai, Tamil Nadu
+          </span>
+
+        </div>
+
+      </div>
+
+
+    </div>
+
+  </div>
+
+</section>
+
+
+</main>
+
+
+
+<!-- =========================
+     FOOTER
+========================== -->
+
+<footer>
+
+  © 2026 Nivetha Purushothaman
+
+  · Digital Marketing Specialist
+
+</footer>
+
+
+</body>
+
+</html>
